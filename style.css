@@ -1,0 +1,694 @@
+/* ==========================================
+   01 - CONFIGURAÇÃO GERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B0B0B;
+    color: #F5F5F5;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ==========================================
+   02 - CABEÇALHO
+========================================== */
+
+header {
+    background-color: #050505;
+    border-bottom: 1px solid #D4AF37;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+}
+
+header h1 {
+    color: #D4AF37;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D4AF37;
+}
+
+
+/* ==========================================
+   03 - BANNER PRINCIPAL
+========================================== */
+
+#inicio.hero {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: left;
+
+    padding: 80px 10%;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 85% 50%,
+            #4A3510 0%,
+            #201707 25%,
+            #111111 55%,
+            #050505 100%
+        );
+
+    border-bottom: 1px solid #D4AF37;
+}
+
+
+/* Iluminação dourada decorativa */
+
+#inicio.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: -100px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            #D4AF3725 0%,
+            #D4AF3708 45%,
+            transparent 70%
+        );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Conteúdo do banner */
+
+.hero-content {
+    max-width: 600px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Subtítulo */
+
+.hero-subtitle {
+    color: #D4AF37;
+
+    letter-spacing: 5px;
+    font-size: 14px;
+
+    text-transform: uppercase;
+}
+
+
+/* Título principal */
+
+.hero h2 {
+    color: #D4AF37;
+
+    font-size: 80px;
+    line-height: 0.95;
+    letter-spacing: 5px;
+
+    margin: 25px 0;
+
+    text-shadow:
+        0 0 15px #D4AF3730,
+        0 0 40px #D4AF3715;
+}
+
+
+/* Texto do banner */
+
+.hero p {
+    color: #CCCCCC;
+
+    font-size: 20px;
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+    max-width: 500px;
+}
+
+
+/* Botão do banner */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 30px;
+
+    padding: 15px 25px;
+
+    border: 1px solid #D4AF37;
+
+    color: #D4AF37;
+    text-decoration: none;
+
+    background-color: #D4AF3708;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Efeito do botão */
+
+.hero-button:hover {
+    background-color: #D4AF37;
+
+    color: #000000;
+
+    box-shadow:
+        0 0 15px #D4AF3750,
+        0 0 35px #D4AF3720;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   04 - TÍTULOS DAS SEÇÕES
+========================================== */
+
+.section-title {
+    text-align: center;
+
+    color: #D4AF37;
+
+    font-size: 32px;
+
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #D4AF37;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    color: #FFFFFF;
+
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   05 - DESTAQUES
+========================================== */
+
+#destaques {
+    padding: 80px 8%;
+
+    background-color: #080808;
+
+    border-bottom: 1px solid #30250D;
+}
+
+
+/* Organização dos cards */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* Card individual */
+
+.card {
+    background-color: #141414;
+
+    border: 1px solid #30250D;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #D4AF37;
+
+    box-shadow: 0 10px 30px #D4AF3715;
+}
+
+
+/* Imagens dos cards */
+
+.card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Títulos dos cards */
+
+.card h3 {
+    color: #D4AF37;
+
+    font-size: 22px;
+
+    margin: 20px 15px 10px;
+}
+
+
+/* Descrição dos cards */
+
+.card p {
+    color: #AAAAAA;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    padding: 0 20px 25px;
+}
+
+
+/* ==========================================
+   06 - SOBRE NÓS
+========================================== */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 100px 8%;
+
+    background-color: #0B0B0B;
+}
+
+
+/* Imagem */
+
+.about-image {
+    width: 100%;
+    height: 420px;
+
+    overflow: hidden;
+
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Conteúdo */
+
+.about-subtitle {
+    color: #D4AF37;
+
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.about-content h2 {
+    color: #FFFFFF;
+
+    font-size: 38px;
+    line-height: 1.3;
+
+    margin: 20px 0;
+}
+
+.about-content h2 span {
+    color: #D4AF37;
+}
+
+.about-content p {
+    color: #AAAAAA;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* Botão */
+
+.about-button {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 14px 22px;
+
+    border: 1px solid #D4AF37;
+
+    color: #D4AF37;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.about-button:hover {
+    background-color: #D4AF37;
+    color: #000000;
+}
+
+
+/* ==========================================
+   07 - CONTATO
+========================================== */
+
+.contact {
+    padding: 90px 8%;
+
+    background-color: #080808;
+
+    border-top: 1px solid #30250D;
+}
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-card {
+    background-color: #111111;
+
+    border: 1px solid #30250D;
+    border-radius: 8px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    border-color: #D4AF37;
+
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    color: #D4AF37;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    color: #D4AF37;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #AAAAAA;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border: 1px solid #D4AF37;
+
+    color: #D4AF37;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #D4AF37;
+    color: #000000;
+}
+
+.contact-info {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   08 - RODAPÉ
+========================================== */
+
+footer {
+    background-color: #050505;
+
+    border-top: 1px solid #D4AF37;
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #888888;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   09 - RESPONSIVIDADE
+========================================== */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        gap: 35px;
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    header {
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+
+    /* Banner */
+
+    #inicio.hero {
+        min-height: 65vh;
+
+        padding: 60px 25px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+        letter-spacing: 3px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    #inicio.hero::before {
+        width: 300px;
+        height: 300px;
+
+        right: -150px;
+    }
+
+
+    /* Destaques */
+
+    #destaques {
+        padding: 60px 20px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+
+    /* Sobre nós */
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 70px 25px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* Contato */
+
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   10 - CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+}
